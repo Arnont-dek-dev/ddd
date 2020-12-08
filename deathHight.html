@@ -61,19 +61,23 @@
                 </nav>
 
             </div>
-            <!-- box recover -->
+            <!-- box death -->
             <div>
                 <div>
-                    <nav class="navbar_box " id="box_recover">
-                        <h1 id="recovered"></h1>
+                    <nav class="navbar_box " id="box_death">
+                        <h1 id="death"></h1>
                         <!-- box litle-most-->
                     </nav>
-                    <nav id="litle-most">&emsp; น้อย
+                    <a href="death.html">
+                        <nav id="litle-most">&emsp; น้อย
 
-                    </nav>
-                    <nav id="litle-most">&emsp; มาก
+                        </nav>
+                    </a>
+                    <a href="deathHight.html">
+                        <nav id="litle-most">&emsp; มาก
 
-                    </nav>
+                        </nav>
+                    </a>
 
                 </div>
 
@@ -107,7 +111,6 @@
 
 
 
-
         </div>
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -117,19 +120,19 @@
             $(document).ready(function() {
                 $.ajax({
                     type: 'GET',
-                    url: 'http://localhost:8080/api/recoveredless',
+                    url: 'http://localhost:8080/api/deathshight',
                     dataType: 'json',
                     success: function(data) {
                         console.log(data.length);
                         let country = [];
                         let province = [];
-                        let recovered = [];
+                        let death = [];
 
                         for (let index = 0; index < data.length; index++) {
                             const element = data[index];
                             console.log(element);
 
-                            recovered.push(element.recovered);
+                            death.push(element.death);
                             country.push(element.country);
                             province.push(element.province);
 
@@ -138,7 +141,7 @@
                             <tr ">
                                 <th scope="row" id="country">${element.province}</th>
                                 <td id="country">${element.country}</td>
-                                <td id="country">${element.recovered}</td>
+                                <td id="country">${element.death}</td>
                                 
                             </tr>`
                             $("#data").append(ID);
@@ -147,14 +150,14 @@
                 });
                 $.ajax({
                     type: 'GET',
-                    url: 'http://localhost:8080/api/recovered',
+                    url: 'http://localhost:8080/api/deaths',
                     dataType: 'json',
                     success: function(data) {
                         console.log(data);
 
-                        $("#recovered").append();
+                        $("#death").append();
                         var ID = `${data.total}`
-                        $("#recovered").append(ID)
+                        $("#death").append(ID)
                     }
                 });
 
@@ -164,6 +167,7 @@
 
             })
         </script>
+
 </body>
 
 </html>

@@ -61,11 +61,11 @@
                 </nav>
 
             </div>
-            <!-- box recover -->
+            <!-- box confirm-->
             <div>
                 <div>
-                    <nav class="navbar_box " id="box_recover">
-                        <h1 id="recovered"></h1>
+                    <nav class="navbar_box " id="box_confirm">
+                        <h1 id="confirmed"></h1>
                         <!-- box litle-most-->
                     </nav>
                     <nav id="litle-most">&emsp; น้อย
@@ -83,7 +83,7 @@
             <div class="help_country">
                 <div>
                     <table class="table">
-                        <thead class="thead-light">
+                        <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Provice</th>
@@ -117,44 +117,45 @@
             $(document).ready(function() {
                 $.ajax({
                     type: 'GET',
-                    url: 'http://localhost:8080/api/recoveredless',
+                    url: 'http://localhost:8080/api/confirmedhight',
                     dataType: 'json',
                     success: function(data) {
                         console.log(data.length);
                         let country = [];
                         let province = [];
-                        let recovered = [];
+                        let confirmed = [];
 
                         for (let index = 0; index < data.length; index++) {
                             const element = data[index];
                             console.log(element);
 
-                            recovered.push(element.recovered);
+                            confirmed.push(element.confirmed);
                             country.push(element.country);
                             province.push(element.province);
 
                             $("#data").append();
                             var ID = `
                             <tr ">
-                                <th scope="row" id="country">${element.province}</th>
-                                <td id="country">${element.country}</td>
-                                <td id="country">${element.recovered}</td>
+                                <th scope="row" id="id">${element.province}</th>
+                                <td id="provice">${element.country}</td>
+                                <td id="country">${element.confirmed}</td>
                                 
                             </tr>`
                             $("#data").append(ID);
                         }
                     }
                 });
+
                 $.ajax({
                     type: 'GET',
-                    url: 'http://localhost:8080/api/recovered',
+                    url: 'http://localhost:8080/api/confirmed',
                     dataType: 'json',
                     success: function(data) {
                         console.log(data);
 
-                        $("#recovered").append();
-                        var ID = `${data.total}`
-                        $("#recovered").append(ID)
+                        $("#confirmed").append();
+                        var ID = `${data.confirmed}`
+                        $("#confirmed").append(ID)
                     }
                 });
 

@@ -2,107 +2,93 @@
 <html lang="en">
 
 <head>
-	<title>Sidebar 02</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sidebar 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/new_style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/new_style.css">
 </head>
 
 <body>
-	<!-- Page side tabbar  -->
-	<div class="wrapper d-flex align-items-stretch">
-		<nav id="sidebar">
-			<div class="custom-menu">
-				<button type="button" id="sidebarCollapse" class="btn btn-primary">
+    <!-- Page side tabbar  -->
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
 					<i class="fa fa-bars"></i>
 					<span class="sr-only">Toggle Menu</span>
 				</button>
-			</div>
-			<div class="p-4 pt-5">
-				<h4><img src="https://img.icons8.com/nolan/64/coronavirus.png" />COVID-19</h4>
-				<ul class="list-unstyled components mb-5">
+            </div>
+            <div class="p-4 pt-5">
+                <h4><img src="https://img.icons8.com/nolan/64/coronavirus.png" />COVID-19</h4>
+                <ul class="list-unstyled components mb-5">
 
 
-					<li>
-						<a href="#">HOME</a>
-					</li>
-					<li>
-						<a href="#">MAP</a>
-					</li>
-				</ul>
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="map.html">MAP</a>
+                    </li>
+                </ul>
 
 
 
-			</div>
-		</nav>
+            </div>
+        </nav>
 
-		<!-- Page Content  -->
-		<div id="content" class="p-4 p-md-5 pt-5">
-			<!-- Search -->
-			<div>
-				<nav class="navbar navbar-expand-lg navbar-dark blue lighten-2 mb-4" id="box_search" >
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+            <!-- Search -->
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-dark blue lighten-2 mb-4" id="box_search">
 
 
-					<div >
+                    <div>
 
-						<form class="form-inline mr-auto" > 
-							<input class="form-control" type="text" placeholder="Search" aria-label="Search">
-							<button class="btn btn-mdb-color " 
-								type="submit" ><img src="https://img.icons8.com/search" style="width: 30px;"  >
+                        <form class="form-inline mr-auto">
+                            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-mdb-color " type="submit"><img src="https://img.icons8.com/search"
+									style="width: 30px;">
 							</button>
-						</form>
+                        </form>
 
-					</div>
+                    </div>
 
-				</nav>
+                </nav>
 
-			</div>
-			<!-- box confirm/ death/ recover -->
-			<div><h1>Thailand</h1>
-				<div>
-					<a href="confirm.html">
-						<nav class="navbar_box " id="box_confirm">
+            </div>
+            <!-- box confirm/ death/ recover -->
+            <div>
+                <h1 id="country"></h1>
+                <div>
 
-						</nav>
-					</a>
+                    <nav class="navbar_box " id="box_confirm">Confirm
+                        <h1 id="confirmed"></h1>
 
-					<a href="death.html">
-					<nav class="navbar_box " id="box_death">
+                    </nav>
+                    </a>
 
-					</nav>
-					</a>
 
-					<a href="recover.html">
-					<nav class="navbar_box " id="box_recover">
+                    <nav class="navbar_box " id="box_death">Death
+                        <h1 id="deaths"></h1>
+                    </nav>
+                    </a>
 
-					</nav>
-					</a>
-				</div>
 
-			</div>
-			<!-- box Date -->
-			<div class="navbar_country">
-				<div >
-                    <nav id="country">kkk
-						
-					</nav>
-					<nav id="country">kkk
-						
-					</nav>
-					<nav id="country">kkk
-						
-					</nav>
-					<nav id="country">kkk
-						
-					</nav>
-				</div>
+                    <nav class="navbar_box " id="box_recover">Recover
+                        <h1 id="recovered"></h1>
 
-			</div>
+                    </nav>
+                    </a>
+                </div>
+
+            </div>
+            <!-- box Date -->
 
 
 
@@ -112,12 +98,70 @@
 
 
 
-		</div>
 
-		<script src="js/jquery.min.js"></script>
-		<script src="js/popper.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/main.js"></script>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                let id = localStorage.getItem('apiID');
+                console.log(id);
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8080/api/confirmed/' + id,
+                    dataType: 'json',
+                    success: function(data) {
+                        console.log(data);
+
+                        $("#confirmed").append();
+                        var ID = `${data.total}`
+                        $("#confirmed").append(ID)
+                    }
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8080/api/deaths/' + id,
+                    dataType: 'json',
+                    success: function(data) {
+                        console.log(data);
+
+                        $("#deaths").append();
+                        var ID = `${data.deaths}`
+                        $("#deaths").append(ID)
+                    }
+                });
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8080/api/country/' + id,
+                    dataType: 'json',
+                    success: function(data) {
+                        console.log(data);
+
+                        $("#country").append();
+                        var ID = `${data.country}`
+                        $("#country").append(ID)
+                    }
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8080/api/recovered/' + id,
+                    dataType: 'json',
+                    success: function(data) {
+                        console.log(data);
+
+                        $("#recovered").append();
+                        var ID = `${data.total}`
+                        $("#recovered").append(ID)
+                    }
+                });
+
+
+            })
+        </script>
+
 </body>
 
 </html>

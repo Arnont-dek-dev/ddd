@@ -61,7 +61,7 @@
                 </nav>
 
             </div>
-            <!-- box recover -->
+            <!-- box death -->
             <div>
                 <div>
                     <nav class="navbar_box " id="box_recover">
@@ -87,7 +87,7 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Provice</th>
-                                <th scope="col">Confirmed</th>
+                                <th scope="col">Deaths</th>
                             </tr>
                         </thead>
                         <tbody id="data">
@@ -98,72 +98,72 @@
 
             </div>
 
-
-
-
-
-
-
-
-
-
-
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function() {
-                $.ajax({
-                    type: 'GET',
-                    url: 'http://localhost:8080/api/recoveredless',
-                    dataType: 'json',
-                    success: function(data) {
-                        console.log(data.length);
-                        let country = [];
-                        let province = [];
-                        let recovered = [];
 
-                        for (let index = 0; index < data.length; index++) {
-                            const element = data[index];
-                            console.log(element);
 
-                            recovered.push(element.recovered);
-                            country.push(element.country);
-                            province.push(element.province);
 
-                            $("#data").append();
-                            var ID = `
+
+
+
+
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:8080/api/deathshight',
+                dataType: 'json',
+                success: function(data) {
+                    console.log(data.length);
+                    let country = [];
+                    let province = [];
+                    let death = [];
+
+                    for (let index = 0; index < data.length; index++) {
+                        const element = data[index];
+                        console.log(element);
+
+                        death.push(element.death);
+                        country.push(element.country);
+                        province.push(element.province);
+
+                        $("#data").append();
+                        var ID = `
                             <tr ">
                                 <th scope="row" id="country">${element.province}</th>
                                 <td id="country">${element.country}</td>
-                                <td id="country">${element.recovered}</td>
+                                <td id="country">${element.death}</td>
                                 
                             </tr>`
-                            $("#data").append(ID);
-                        }
+                        $("#data").append(ID);
                     }
-                });
-                $.ajax({
-                    type: 'GET',
-                    url: 'http://localhost:8080/api/recovered',
-                    dataType: 'json',
-                    success: function(data) {
-                        console.log(data);
+                }
+            });
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:8080/api/recovered',
+                dataType: 'json',
+                success: function(data) {
+                    console.log(data);
 
-                        $("#recovered").append();
-                        var ID = `${data.total}`
-                        $("#recovered").append(ID)
-                    }
-                });
-
-
-
+                    $("#recovered").append();
+                    var ID = `${data.total}`
+                    $("#recovered").append(ID)
+                }
+            });
 
 
-            })
-        </script>
+
+
+
+        })
+    </script>
 </body>
 
 </html>

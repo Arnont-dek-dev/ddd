@@ -1,86 +1,80 @@
 .navbar_box {
-    padding: 50px;
+    padding: 20px;
     background: #fff;
     border-radius: 20px;
-    
-    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+    -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
     width: 30%;
-	height: 120px;
-    margin: 10px 0px 10px 26px ;
+    height: 120px;
+    margin: 10px 0px 10px 26px;
     float: left;
 }
-#box_search{
+
+#box_search {
     border-radius: 50px;
     width: 30%;
     height: 55px;
-	margin-right:10px;
-	/* float: right; */
+    margin-right: 10px;
+    /* float: right; */
+}
 
+#box_confirm {
+    background: #f8f5cf;
 }
-#box_confirm{
-   
-	background: #D2F5E3;
- 
-}
-#box_death{
-   
-	background: #FFB0B0;
 
+#box_death {
+    background: #FFB0B0;
 }
-#box_recover{
-  
-	background: #D2F6C5;
-   
+
+#box_recover {
+    background: #D2F6C5;
 }
 
 .navbar_country {
     padding: 50px;
     background: #fff;
     margin: 200px 10px 200px 10px;
-    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
-    
+    -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
 }
+
 .once_country {
     height: 150px;
     padding: 40px;
     background: #fff;
-    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+    -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
 }
+
 .help_country {
-    
     margin: 200px 10px 200px 10px;
-       
 }
-#country{
+
+#country {
     padding: 50px;
     background: #fff;
     border-radius: 40px;
     margin: 20px 20px 20px 20px;
     -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-
-#text-left{
+#text-left {
     font-size: 30px;
     float: left;
-    
 }
-#text-right{
+
+#text-right {
     font-size: 30px;
     float: right;
-    
 }
-#litle-most{
-    
+
+#litle-most {
     float: right;
     margin: 100px 50px 0px -50px;
     -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     width: 7%;
     height: 30px;
     float: right;

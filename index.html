@@ -2,125 +2,224 @@
 <html lang="en">
 
 <head>
-	<title>Sidebar 02</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sidebar 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/new_style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/new_style.css">
 </head>
 
 <body>
-	<!-- Page side tabbar  -->
-	<div class="wrapper d-flex align-items-stretch">
-		<nav id="sidebar">
-			<div class="custom-menu">
-				<button type="button" id="sidebarCollapse" class="btn btn-primary">
-					<i class="fa fa-bars"></i>
-					<span class="sr-only">Toggle Menu</span>
-				</button>
-			</div>
-			<div class="p-4 pt-5">
-				<h4><img src="https://img.icons8.com/nolan/64/coronavirus.png" />COVID-19</h4>
-				<ul class="list-unstyled components mb-5">
+    <!-- Page side tabbar  -->
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+            <div class="p-4 pt-5">
+                <h4><img src="https://img.icons8.com/nolan/64/coronavirus.png" />COVID-19</h4>
+                <ul class="list-unstyled components mb-5">
 
 
-					<li>
-						<a href="#">HOME</a>
-					</li>
-					<li>
-						<a href="#">MAP</a>
-					</li>
-				</ul>
-
-
-
-			</div>
-		</nav>
-
-		<!-- Page Content  -->
-		<div id="content" class="p-4 p-md-5 pt-5">
-			<!-- Search -->
-			<div>
-				<nav class="navbar navbar-expand-lg navbar-dark blue lighten-2 mb-4" id="box_search" >
-
-
-					<div >
-
-						<form class="form-inline mr-auto" > 
-							<input class="form-control" type="text" placeholder="Search" aria-label="Search">
-							<button class="btn btn-mdb-color " 
-								type="submit" ><img src="https://img.icons8.com/search" style="width: 30px;"  >
-							</button>
-						</form>
-
-					</div>
-
-				</nav>
-
-			</div>
-			<!-- box confirm/ death/ recover -->
-			<div>
-				<div>
-					<a href="confirm.html">
-						<nav class="navbar_box " id="box_confirm">
-
-						</nav>
-					</a>
-
-					<a href="death.html">
-					<nav class="navbar_box " id="box_death">
-
-					</nav>
-					</a>
-
-					<a href="recover.html">
-					<nav class="navbar_box " id="box_recover">
-
-					</nav>
-					</a>
-				</div>
-
-			</div>
-			<!-- box All country -->
-			<div class="navbar_country">
-				<div><h1>Global</h1>
-					<nav id="country">kkk
-						
-					</nav>
-					<nav id="country">kkk
-						
-					</nav>
-					<nav id="country">kkk
-						
-					</nav>
-					<nav id="country">kkk
-						
-					</nav>
-					
-
-				</div>
-
-			</div>
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="map.html">MAP</a>
+                    </li>
+                    <li>
+                        <a href="top.html">TOP</a>
+                    </li>
+                </ul>
 
 
 
+            </div>
+        </nav>
 
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+            <!-- Search -->
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-dark blue lighten-2 mb-4" id="box_search">
+
+                    <div>
+
+                        <!-- <form class="form-inline mr-auto"> -->
+                        <input class="form-control" type="text" placeholder="Search" aria-label="Search" id="search">
+                        <button class="btn btn-mdb-color " type="submit">
+                            <img src="https://img.icons8.com/search" style="width: 30px;" onclick="search()">
+                        </button>
+                        </form>
+
+                    </div>
+
+                </nav>
+
+            </div>
+            <!-- box confirm/ death/ recover -->
+            <div>
+                <div>
+                    <a href="confirm.html">
+                        <div class="navbar_box " id="box_confirm">Confirmed
+                            <h1 id="confirmed"></h1>
+                        </div>
+                    </a>
+
+                    <a href="death.html">
+                        <nav class="navbar_box " id="box_death">Deaths
+                            <h1 id="deaths"></h1>
+                        </nav>
+                    </a>
+
+                    <a href="recover.html">
+                        <nav class="navbar_box " id="box_recover">Recovered
+                            <h1 id="recovered"></h1>
+                        </nav>
+                    </a>
+                </div>
+            </div>
+            <!-- box All country -->
+            <div class="navbar_country">
+                <div>
+                    <h1>Global</h1>
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Provice</th>
+                                <th scope="col">Country</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data">
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
 
 
 
 
 
 
-		</div>
 
-		<script src="js/jquery.min.js"></script>
-		<script src="js/popper.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/main.js"></script>
+
+
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script>
+            function search() {
+                let str = $("#search").val();
+                console.log(str);
+                let getApiAll = "http://localhost:8080/api";
+                if (str != "") {
+
+                    $.get(getApiAll, function(getApi) {
+                        for (let index = 0; index < getApi.length; index++) {
+                            const element = getApi[index];
+                            const country = element.country;
+
+                            if (country == str) {
+                                console.log(element);
+                                console.log(element.id);
+                                localStorage.setItem('countryID', id);
+                                location.href = "country.html";
+                            } else {
+                                alert("ไม่มีข้อมูล");
+                                return str = ""
+                            }
+                        }
+                    });
+                }
+
+            }
+
+            $(document).ready(function() {
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8080/api',
+                    dataType: 'json',
+                    success: function(data) {
+
+                        for (let index = 0; index < data.length; index++) {
+                            const element = data[index];
+                            $("#data").append();
+                            var
+                                ID = ` <tr onclick="select(${element.id})">
+            <th scope="row" id="id">${element.id}</th>
+            <td id="country">${element.province}</td>
+            <td id="country">${element.country}</td>
+
+            </tr>`
+                            $("#data").append(ID);
+                        }
+                    }
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8080/api/confirmed',
+                    dataType: 'json',
+                    success: function(data) {
+                        console.log(data);
+
+                        $("#confirmed").append();
+                        var ID = `${data.confirmed}`
+                        $("#confirmed").append(ID)
+                    }
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8080/api/deaths',
+                    dataType: 'json',
+                    success: function(data) {
+                        console.log(data);
+
+                        $("#deaths").append();
+                        var ID = `${data.total}`
+                        $("#deaths").append(ID)
+                    }
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8080/api/recovered',
+                    dataType: 'json',
+                    success: function(data) {
+                        console.log(data);
+
+                        $("#recovered").append();
+                        var ID = `${data.total}`
+                        $("#recovered").append(ID)
+                    }
+                });
+
+
+
+            })
+
+            function select(id) {
+                localStorage.setItem('apiID', id);
+                location.href = "country.html";
+            }
+        </script>
+
+
 </body>
 
 </html>
