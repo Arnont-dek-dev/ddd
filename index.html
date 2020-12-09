@@ -53,11 +53,12 @@
                     <div>
 
                         <!-- <form class="form-inline mr-auto"> -->
+
                         <input class="form-control" type="text" placeholder="Search" aria-label="Search" id="search">
-                        <button class="btn btn-mdb-color " type="submit">
+                        <button class="btn btn-mdb-color btn-rounded btn-sm my-0 ml-sm-2" type="submit">
                             <img src="https://img.icons8.com/search" style="width: 30px;" onclick="search()">
                         </button>
-                        </form>
+
 
                     </div>
 
@@ -134,13 +135,17 @@
                             const country = element.country;
 
                             if (country == str) {
+                                console.log(str);
+                                str.innerHTML = "";
                                 console.log(element);
                                 console.log(element.id);
-                                localStorage.setItem('countryID', id);
+                                localStorage.setItem('apiID', element.id);
                                 location.href = "country.html";
+
+
                             } else {
-                                alert("ไม่มีข้อมูล");
-                                return str = ""
+                                // alert("ไม่มีข้อมูล")
+                                // return str.innerHTML = "";
                             }
                         }
                     });
